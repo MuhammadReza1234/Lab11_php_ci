@@ -1,6 +1,6 @@
 # Lab11_php_ci
 
-<h1 <p align="center"><b>Praktikum 11</b></p></h1> 
+<h1 <p align="center"><b>Praktikum 1</b></p></h1> 
 
 **Nama: Muhammad Reza Maulana**
 
@@ -42,11 +42,11 @@ Kemudian, sebelum memulai menggunakan Framework Codeigniter kita perlu melakukan
 
 Untuk dapat mengaktifkannya kalian perlu masuk kedalam control panel xampp kemudian pada bagian apache klik Config > ```PHP (php.ini)``` seperti gambar dibawah.
 
-![Screenshot (568)](https://github.com/roswanda11/lab11web/assets/115516632/9d68971b-27a8-43ab-b6ac-e21931b10944)
+<img width="852" alt="1" src="https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/3b992edb-bbdf-48cd-925b-4fee6e07a67b">
 
 Setelahnya cukup hilangkan tanda ; pada ekstentsi yang akan diaktifkan seperti gambar dibawah. Kemudian simpan kembali file tersebut dan restart Apache web servernya.
 
-![Screenshot (569)](https://github.com/roswanda11/lab11web/assets/115516632/1fdebb0c-eca4-40c5-829a-fe03c4326ec2)
+![2](https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/cea8fcd7-32d9-4734-88b2-e90917ea1f2d)
 
 ## PENGINSTALLAN CODEIGNITER 4
 
@@ -57,7 +57,7 @@ Untuk melakukan instalasi codeigniter 4 dapat dilakukan dengan dua cara , yaitu 
   -  Ubah nama direktory framework-4.x.xx menjadi ci4
   -  Buka browser dengan alamat http://localhost/Lab11Web/lab11_php_ci/ci4/public/
 
-![image](https://github.com/roswanda11/lab11web/assets/115516632/dce6c640-bbbe-40b6-beb6-f5c2a2201a96)
+![3](https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/30e57b5e-df08-4ca6-83ee-1e69e79ff90f)
 
 Pilih codeigniter 4 kemudian tekan download dan tunggu hingga terinstall.
 
@@ -65,13 +65,13 @@ Pilih codeigniter 4 kemudian tekan download dan tunggu hingga terinstall.
 
 Codeigniter 4 menyediakan CLI untuk dapat mempermudah proses development. Untuk mengakses CLI bukalah terminal/command prompt. Kemudian arahkan lokasi direktori sesuai dengan direktori kerja project dibuat. (xampp/htdocs/Lab11Web/Lab11_php_ci/ci4)
 
-![Screenshot (572)](https://github.com/roswanda11/lab11web/assets/115516632/fcb87b6e-e614-4c82-89d9-10b684938acc)
-
 Dan masukan perintah dibawah untuk dapat menjalankan guna memanggil CLI Codeigniter.
 
 ```php
 php spark
 ```
+
+![4](https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/c0476dba-8f70-4a7e-bc95-91a47f10d6e3)
 
 ## PENGAKTIFAN MODE DEBUGGING
 
@@ -79,16 +79,15 @@ Codeigniter 4 menyediakan fitur debugging untuk memudahkan developer untuk menge
 
 Maka untuk mengaktifkannya, Pertama ubahlah file env menjadi .env . Kemudian ubah nilai konfigurasi pada environment variable CI_ENVIRONMENT menjadi development seperti gambar berikut.
 
-![Screenshot (574)](https://github.com/roswanda11/lab11web/assets/115516632/aee275f6-9c22-4617-a33e-94a71b38457a)
+<img width="419" alt="5" src="https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/309ef73e-672c-4806-9ae1-b85084b18a2a">
 
 Selanjutnya hilangkanlah ; pada akhir kode ketika kalian membuka file app/Controller/Home.php seperti berikut.
 
-![Screenshot (575)](https://github.com/roswanda11/lab11web/assets/115516632/29f53499-8c64-4597-92a3-a4cbbd015651)
+<img width="440" alt="6" src="https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/57ff6d51-b915-4843-8bda-a4591e714e47">
 
 Dan terjadilah error pada aplikasi yang akan ditampilkan pesan kesalahan seperti berikut.
 
-![menambahkan_gambar](img/TAMPILAN%20ERROR.png)
-
+![7](https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/6fd5e680-deda-4a57-b0ac-fe9eb660da94)
 
 ## PEMBUATAN ROUTE BARU
 
@@ -100,19 +99,25 @@ $routes->get('/contact', 'Page::contact');
 $routes->get('/faqs', 'Page::faqs');
 ```
 
-Kemudian buka CLI dan jalankan perintah tersebut. Jika mendapat tampilan seperti dibawah maka penambahan routes sudah benar.
+Kemudian buka CLI dan jalankan perintah berikut
 
-![menambahkan_gambar](img/CEK%20ROUTES.png)
+```php
+php spark routes
+```
+
+Jika mendapat tampilan seperti dibawah maka penambahan routes sudah benar.
+
+<img width="960" alt="8" src="https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/805f9a87-2127-4a6d-90dd-cf9c73f8758f">
 
 Selanjutnya cobalah untuk mengakses route yang telah dibuat dengan mengakses alamat URL http://localhost:8080/about
 
-![menambahkan_gambar](img/CEK%20WEB%20ROUTES.png)
+<img width="841" alt="9" src="https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/70baf9f6-d792-4064-9d8e-89c50761aa61">
 
 Jika mendapat tampilan seperti diatas, maka artinya file atau pages tersebut tidak ada. Dan untuk dapat mengakses halaman tersebut, harus dibuat terlebih dahulu Controller yang sesuai dengan routing yang dibuat yaitu Controller Page.
 
 ## MEMBUAT CONTROLLER
 
-![menambahkan_gambar](img/MEMBUAT%20CONTROLLER.png)
+![10](https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/3fe81243-474d-473a-8152-5b1553c90162)
 
 Selanjutnya adalah membuat Controller Page seperti diatas. Buat file baru dengan nama page.php pada direktori Controller kemudian isi kodenya seperti berikut.
 
@@ -148,11 +153,11 @@ $routes->setAutoRoute(true);
 
 Tambahkan method baru pada Controller Page seperti berikut.
 
-![menambahkan_gambar](img/AUTO%20ROUTING.png)
+![11](https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/36bde419-9a36-4830-b48f-6f209c361248)
 
 ## MEMBUAT VIEW
 
-![menambahkan_gambar](img/BUAT%20VIEW.png)
+<img width="960" alt="12" src="https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/bbc8ac65-1262-4b04-91d6-61a41e0d922f">
 
 Selanjutnya adalah membuat view untuk tampilan web agar lebih menarik seperti diatas dengan membuat file baru dengan nama about.php pada direktori view (app/view/about.php) kemudian isi kodenya seperti berikut.
 
@@ -237,4 +242,4 @@ Selanjutnya, ubahlah file about pada app view dengan kode berikut.
 
 Maka ketika halaman web tersebut kalian refresh, kalian akan mendapat tampilan seperti gambar dibawah ini.
 
-![menambahkan_gambar](img/LAYOUT%20WEB.png)
+![13](https://github.com/MuhammadReza1234/Lab11_php_ci/assets/115516607/8d34de11-9f3e-45c4-b375-d542dc06b2ab)
