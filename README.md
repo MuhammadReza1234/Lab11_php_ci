@@ -1,4 +1,3 @@
-# Lab11_php_ci
 
 <h1 <p align="center"><b>Praktikum 1</b></p></h1> 
 
